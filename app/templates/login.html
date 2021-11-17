@@ -2,12 +2,14 @@
 {% import 'bootstrap/wtf.html' as wtf %}
 
 {% block app_content %}
-    <h1>Login</h1>
+    <div class="container">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-sm-4 col-sm-offset-4">
+            <h1 class="text-center">Login</h1>
             {{ wtf.quick_form(form) }}
+            <br>
+            <p>New to Blend & Filter? <a href="{{ url_for('new_account') }}">Click to Create a New Account!</a></p>
         </div>
     </div>
-    <br>
-    <p>New to Blend & Filter? <a href="{{ url_for('new_account') }}">Click to Create a New Account!</a></p>
+    </div>
 {% endblock %}

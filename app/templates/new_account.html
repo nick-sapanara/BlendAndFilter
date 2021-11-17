@@ -2,10 +2,12 @@
 {% import 'bootstrap/wtf.html' as wtf %}
 
 {% block app_content %}
-    <h1>Create New Account</h1>
+    <div class="container">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-sm-4 col-sm-offset-4">
+            <h1 class="text-center">Create New Account</h1>
             {{ wtf.quick_form(form) }}
         </div>
+    </div>
     </div>
 {% endblock %}
