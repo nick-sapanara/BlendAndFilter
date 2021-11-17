@@ -1,13 +1,11 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% import 'bootstrap/wtf.html' as wtf %}
 
 {% block app_content %}
-    <h1>Login</h1>
+    <h1>Create New Account</h1>
     <div class="row">
         <div class="col-md-4">
             {{ wtf.quick_form(form) }}
         </div>
     </div>
-    <br>
-    <p>New to Blend & Filter? <a href="{{ url_for('new_account') }}">Click to Create a New Account!</a></p>
 {% endblock %}
