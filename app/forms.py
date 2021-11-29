@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField
-from wtforms.validators import ValidationError, DataRequired, Email, EqualTo
-from app.models import My_Account
+from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField
+from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, Length
+from app.models import User
 
 class LoginForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
@@ -16,15 +16,22 @@ class RegistrationForm(FlaskForm):
     password = PasswordField('Password', validators=[DataRequired()])
     password2 = PasswordField(
         'Repeat Password', validators=[DataRequired(), EqualTo('password')])
-    submit = SubmitField('Register')
+    submit = SubmitField('Next')
 
     def validate_username(self, username):
-        my_account = My_Account.query.filter_by(username=username.data).first()
-        if my_account is not None:
+        user = User.query.filter_by(username=username.data).first()
+        if user is not None:
             raise ValidationError('Please use a different username.')
 
     def validate_email(self, email):
-        my_account = My_Account.query.filter_by(email=email.data).first()
-        if my_account is not None:
+        user = User.query.filter_by(email=email.data).first()
+        if user is not None:
             raise ValidationError('Please use a different email address.')
+
+class RegistrationForm2(FlaskForm):
+    #need code to add a photo
+    about_me = TextAreaField('About me', validators=[Length(min=0, max=140)])
+    submit = SubmitField('Next')
+
+
 

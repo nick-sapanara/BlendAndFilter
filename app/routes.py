@@ -3,7 +3,7 @@ from flask_login import login_user, logout_user, current_user, login_required
 from werkzeug.urls import url_parse
 from app import app, db
 from app.forms import LoginForm, RegistrationForm
-from app.models import My_Account
+from app.models import User, User2Shop, UserMixin
 
 @app.route('/')
 @app.route('/index')
@@ -17,7 +17,7 @@ def login():
         return redirect(url_for('index'))
     form = LoginForm()
     if form.validate_on_submit():
-        user = My_Account.query.filter_by(username=form.username.data).first()
+        user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
             return redirect(url_for('login'))
@@ -41,10 +41,20 @@ def new_account():
         return redirect(url_for('index'))
     form = RegistrationForm()
     if form.validate_on_submit():
-        user = My_Account(username=form.username.data, email=form.email.data)
+        user = User(username=form.username.data, email=form.email.data)
         user.set_password(form.password.data)
         db.session.add(user)
         db.session.commit()
         flash('Congratulations, you are now a registered user!')
         return redirect(url_for('login'))
     return render_template('new_account.html', title='New Account', form=form)
+
+@app.route('/my_account')
+def my_account():
+    title = 'My Account'
+    return render_template('my_account.html', title=title)
+
+@app.route('/add_shop')
+def add_shop():
+    title = 'Add Shop'
+    return render_template('add_shop.html', title=title)
