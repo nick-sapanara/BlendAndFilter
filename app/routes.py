@@ -4,6 +4,7 @@ from werkzeug.urls import url_parse
 from app import app, db
 from app.forms import LoginForm, RegistrationForm
 from app.models import User, User2Shop, UserMixin
+from config import Config
 
 @app.route('/')
 @app.route('/index')
