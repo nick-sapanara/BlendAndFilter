@@ -1,0 +1,89 @@
+2021-12-06 11:23:45,619 ERROR: Exception on /new_account3 [GET] [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/routes.py", line 73, in new_account3
+    form = RegistrationForm3()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_wtf/form.py", line 73, in __init__
+    super().__init__(formdata=formdata, **kwargs)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/wtforms/form.py", line 280, in __init__
+    super().__init__(self._unbound_fields, meta=meta_obj, prefix=prefix)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/wtforms/form.py", line 48, in __init__
+    field = meta.bind_field(self, unbound_field, options)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/wtforms/meta.py", line 28, in bind_field
+    return unbound_field.bind(form=form, **options)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/wtforms/fields/core.py", line 395, in bind
+    return self.field_class(*self.args, **kw)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/wtforms/fields/simple.py", line 36, in __init__
+    super().__init__(label, validators, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'coerce'
+2021-12-06 11:28:37,336 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 11:37:56,743 ERROR: Exception on /new_account3 [POST] [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/routes.py", line 77, in new_account3
+    for tag_id in form.tag.data:
+TypeError: 'bool' object is not iterable
+2021-12-06 14:54:28,898 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 14:54:48,582 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 14:54:50,928 ERROR: Exception on / [GET] [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/routes.py", line 13, in index
+    return render_template('index.html', title=title)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block 'body'
+    {% block navbar %}
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/templates/base.html", line 26, in block 'navbar'
+    <li><a href="{{ url_for('my_account') }}">My Account</a></li>
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/helpers.py", line 325, in url_for
+    rv = url_adapter.build(
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/werkzeug/routing.py", line 2314, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'my_account'. Did you forget to specify values ['username']?
+2021-12-06 14:57:05,242 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]

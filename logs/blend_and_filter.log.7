@@ -1,0 +1,109 @@
+2021-12-04 17:07:40,925 ERROR: Exception on /my_account [GET] [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/routes.py", line 79, in my_account
+    return render_template('my_account.html', title='My Account')
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/templates/my_account.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/templates/base.html", line 47, in block 'content'
+    {% block app_content %}{% endblock %}
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/templates/my_account.html", line 5, in block 'app_content'
+    <h2>{{ user.name }}</h2>
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'user' is undefined
+2021-12-04 17:07:44,768 ERROR: Exception on /my_account [GET] [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/routes.py", line 79, in my_account
+    return render_template('my_account.html', title='My Account')
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/templates/my_account.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/templates/base.html", line 47, in block 'content'
+    {% block app_content %}{% endblock %}
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/templates/my_account.html", line 5, in block 'app_content'
+    <h2>{{ user.name }}</h2>
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'user' is undefined
+2021-12-04 17:08:18,037 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-05 21:13:17,491 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-05 21:13:55,340 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-05 21:15:29,869 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 09:39:32,099 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 09:44:32,164 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 10:20:39,632 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 10:20:45,752 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 10:22:12,499 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 10:23:49,419 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 10:24:37,557 ERROR: Exception on /new_account3 [POST] [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/routes.py", line 76, in new_account3
+    user.about_me = form.about_me.data
+AttributeError: 'RegistrationForm3' object has no attribute 'about_me'
+2021-12-06 10:25:21,057 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 10:49:27,475 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]

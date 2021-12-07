@@ -1,0 +1,107 @@
+2021-12-06 10:49:35,269 ERROR: Exception on /populate_db [GET] [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/routes.py", line 113, in populate_db
+    clear_db()
+NameError: name 'clear_db' is not defined
+2021-12-06 10:50:17,715 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 10:50:23,918 ERROR: Exception on /populate_db [GET] [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/routes.py", line 115, in populate_db
+    u1 = User(name="Nick", username="nsap", email="nsapanara@ithaca.edu", password="1234")
+  File "<string>", line 4, in __init__
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/sqlalchemy/orm/state.py", line 480, in _initialize_instance
+    manager.dispatch.init_failure(self, args, kwargs)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/sqlalchemy/orm/state.py", line 477, in _initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/sqlalchemy/orm/decl_base.py", line 1154, in _declarative_constructor
+    raise TypeError(
+TypeError: 'password' is an invalid keyword argument for User
+2021-12-06 10:50:55,703 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 10:51:25,827 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 10:52:20,290 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 10:52:40,112 ERROR: Exception on /new_account3 [GET] [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/routes.py", line 74, in new_account3
+    form.tag.choices = [(t.id, t.coffee) for t in Tag.query.all()]
+AttributeError: 'RegistrationForm3' object has no attribute 'tag'
+2021-12-06 10:54:06,984 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 10:54:19,786 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 10:55:40,567 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 10:58:00,170 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 11:00:16,363 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 11:01:19,435 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 11:01:34,132 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 11:02:09,416 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 11:02:37,631 ERROR: Exception on /new_account3 [POST] [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/routes.py", line 77, in new_account3
+    user.tag = form.tag.data
+AttributeError: 'NoneType' object has no attribute 'tag'
+2021-12-06 11:06:36,828 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 11:06:54,514 ERROR: Exception on /new_account3 [POST] [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/routes.py", line 82, in new_account3
+    return redirect(url_for('index.html'))
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/helpers.py", line 325, in url_for
+    rv = url_adapter.build(
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/werkzeug/routing.py", line 2314, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'index.html'. Did you mean 'index' instead?
+2021-12-06 11:07:23,015 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 11:09:39,860 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 11:12:41,083 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 11:18:47,021 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 11:18:56,832 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 11:23:23,498 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
