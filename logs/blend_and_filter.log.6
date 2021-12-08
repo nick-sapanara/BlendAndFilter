@@ -1,0 +1,96 @@
+2021-12-07 18:10:38,418 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:13:31,970 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:14:28,490 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:14:55,639 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:15:54,212 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:18:20,800 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:18:58,502 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:20:00,085 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:20:59,986 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:21:05,622 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:22:13,582 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:22:19,155 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:26:50,225 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:27:52,435 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:30:17,436 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:31:26,846 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:33:11,798 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:33:43,613 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:35:28,875 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:36:11,873 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:38:12,301 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:38:35,264 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:39:44,699 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:39:57,078 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:41:14,555 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:41:17,609 ERROR: Exception on / [POST] [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/routes.py", line 23, in index
+    return render_template('search_results.html', search_results=search_results)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/templating.py", line 148, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1068, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 997, in get_template
+    return self._load_template(name, globals)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 958, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/loaders.py", line 137, in load
+    code = environment.compile(source, name, filename)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 757, in compile
+    self.handle_exception(source=source_hint)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/templates/search_results.html", line 13, in template
+    <div class="card__text"> {{ biz['price'] biz['catergories'].title[0] }} </div>
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got 'biz'
+2021-12-07 18:41:37,352 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:41:39,942 ERROR: Exception on / [POST] [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/routes.py", line 23, in index
+    return render_template('search_results.html', search_results=search_results)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/templates/search_results.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/templates/base.html", line 50, in block 'content'
+    {% block app_content %}{% endblock %}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/templates/search_results.html", line 13, in block 'app_content'
+    <div class="card__text"> {{ biz['price'] }} {{ biz['catergories'].title[0] }} </div>
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'catergories'
+2021-12-07 18:41:59,547 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 18:42:29,323 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]

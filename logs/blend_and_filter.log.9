@@ -1,0 +1,89 @@
+2021-12-06 10:34:30,384 ERROR: Exception on / [GET] [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/routes.py", line 25, in index
+    return render_template('index.html', title=title, form=form)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/templates/base.html", line 47, in block 'content'
+    {% block app_content %}{% endblock %}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/templates/index.html", line 11, in block 'app_content'
+    {{ form.location.label }}<br>
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.forms.SearchForm object' has no attribute 'location'
+2021-12-06 10:37:27,523 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 10:37:29,548 ERROR: Exception on / [GET] [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/routes.py", line 25, in index
+    return render_template('index.html', title=title, form=form)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/templates/base.html", line 47, in block 'content'
+    {% block app_content %}{% endblock %}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/templates/index.html", line 12, in block 'app_content'
+    {{ form.username(size=50) }}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/utils.py", line 84, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+jinja2.exceptions.UndefinedError: 'app.forms.SearchForm object' has no attribute 'username'
+2021-12-06 10:37:49,278 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 10:38:18,530 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 12:33:42,883 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 12:43:56,351 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 12:45:55,501 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 12:47:41,235 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 12:49:10,166 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 12:49:36,559 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 12:50:22,341 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 12:53:49,520 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]

@@ -1,0 +1,100 @@
+2021-12-06 10:05:46,853 ERROR: Exception on / [GET] [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/routes.py", line 14, in index
+    return render_template('index.html', title=title)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/templates/base.html", line 47, in block 'content'
+    {% block app_content %}{% endblock %}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/templates/index.html", line 9, in block 'app_content'
+    {{ form.hidden_tag() }}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2021-12-06 10:26:51,312 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 10:27:37,075 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 10:28:17,159 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 10:28:23,052 ERROR: Exception on / [GET] [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/routes.py", line 15, in index
+    if form.validate_on_submit():
+TypeError: validate_on_submit() missing 1 required positional argument: 'self'
+2021-12-06 10:29:10,276 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 10:29:11,951 ERROR: Exception on / [GET] [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/routes.py", line 15, in index
+    if form.validate_on_submit():
+TypeError: validate_on_submit() missing 1 required positional argument: 'self'
+2021-12-06 10:31:39,883 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 10:32:03,077 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 10:32:11,655 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 10:32:13,159 ERROR: Exception on / [GET] [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/routes.py", line 15, in index
+    if form.validate_on_submit():
+TypeError: validate_on_submit() missing 1 required positional argument: 'self'
+2021-12-06 10:33:41,591 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-06 10:33:42,939 ERROR: Exception on / [GET] [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/routes.py", line 15, in index
+    if form.validate_on_submit():
+TypeError: validate_on_submit() missing 1 required positional argument: 'self'
+2021-12-06 10:34:27,965 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]

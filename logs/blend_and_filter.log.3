@@ -1,0 +1,79 @@
+2021-12-07 19:07:10,612 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:07:32,921 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:07:54,736 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:10:51,157 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:11:35,474 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:12:16,028 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:12:42,380 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:12:54,903 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:13:15,988 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:13:48,583 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:15:19,393 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:18:47,602 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:19:15,316 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:21:20,305 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:21:50,074 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:22:07,836 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:24:24,960 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:24:52,440 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:30:40,980 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:31:05,907 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:32:32,639 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:33:33,411 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:34:19,461 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:37:32,592 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:37:39,421 ERROR: Exception on /index [GET] [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/routes.py", line 26, in index
+    return render_template('index.html', title=title, form=form)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/templates/base.html", line 50, in block 'content'
+    {% block app_content %}{% endblock %}
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/templates/index.html", line 11, in block 'app_content'
+    <select {{for.state.select}}></select>
+  File "/Users/cameronmaxey/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'for' is undefined
+2021-12-07 19:38:12,117 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:38:44,889 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:39:27,789 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:41:19,319 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:42:06,292 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:42:36,287 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:42:53,167 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:43:04,456 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:43:13,527 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:44:01,582 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:44:13,815 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:44:28,310 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:45:44,383 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:46:07,503 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:46:20,162 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 19:47:38,461 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]

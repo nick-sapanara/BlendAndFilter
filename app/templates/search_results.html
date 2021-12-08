@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+
+{% block app_content %}
+{% for biz in search_results['businesses'] %}
+<ul class="cards">
+  <li class="cards__item">
+    <div class="card">
+      <img src="{{ biz['image_url'] }}">
+      <div class="card__content">
+        <div class="card__title">{{ biz['name'] }}</div>
+        <div class="card__text"> {{ biz['price']}} | {{ biz['rating']}}/5.0  </div>
+        {% for i in biz['categories'] %}
+        <div class="card__text">{{ i.title }}</div>
+        {% endfor %}
+        <div class="card__text">Address: {{ biz['location'].display_address[0] }}, {{ biz['location'].display_address[1] }} </div>
+        <button class="btn btn--block card__btn">Learn More</button>
+      </div>
+    </div>
+  </li>
+</ul>
+{% endfor %}
+
+{% endblock %}
