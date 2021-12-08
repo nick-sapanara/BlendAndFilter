@@ -33,6 +33,9 @@
 {% endblock %}
 
 {% block content %}
+<head>
+<link rel= "stylesheet" href="{{ url_for('static', filename='mystyle.css')}}">
+</head>
     <body class="bg-info">
     <div class="container">
         {% with messages = get_flashed_messages() %}

@@ -2,15 +2,27 @@ from flask import render_template, flash, redirect, url_for, request
 from flask_login import login_user, logout_user, current_user, login_required
 from werkzeug.urls import url_parse
 from app import app, db
-from app.forms import LoginForm, RegistrationForm, RegistrationForm2, RegistrationForm3, AddShopForm
+from app.forms import LoginForm, RegistrationForm, RegistrationForm2, RegistrationForm3, AddShopForm, SearchForm
 from app.models import User, Shop, Tag, User2Tag
+from yelpapi import YelpAPI
 
-
-@app.route('/')
-@app.route('/index')
+@app.route('/', methods=['GET', 'POST'])
+@app.route('/index', methods=['GET', 'POST'])
 def index():
     title = 'Blend & Filter'
-    return render_template('index.html', title=title)
+    form = SearchForm()
+    if form.validate_on_submit():
+        city = form.city.data
+        state = form.city.data
+        location = city + ", " + state
+        yelp_api = YelpAPI(
+                "jgAIlOyDcteIC-QzduVUg5N-PgCgKcM5_Oi2F_gp0KYCE5xSwxGftWhWdby7QTMsJ0ihq9EVXqxP7zS7nwp5wV2xZ6Eyt2iRtr0ustfVipE8ZEdL4RCpZYQMmj6mYXYx",
+                timeout_s=3.0)
+        search_results = yelp_api.search_query(term="coffee", location=location, sort_by='rating', limit=5)
+        return render_template('search_results.html', search_results=search_results)
+
+
+    return render_template('index.html', title=title, form=form)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -156,3 +168,5 @@ def clear_db():
        db.session.execute(table.delete())
    db.session.commit()
    return render_template('index.html', meta=meta)
+
+

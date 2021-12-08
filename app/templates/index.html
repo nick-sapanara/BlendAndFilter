@@ -5,11 +5,14 @@
 <div class="container">
     <div class="row center-block">
         <div class="col-4">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Enter your location...">
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">Blend!</button>
-                </span>
+            <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+                <input type="text" class="form-control" placeholder="Enter your location..."{{ form.city }}
+                <p>{{ form.state.select }}
+                    {{ form.state(siz=25) }}
+               </p>
+        <p>{{ form.submit() }}</p>
+            </form>
             </div>
         </div>
     </div>

@@ -67,3 +67,6 @@ Traceback (most recent call last):
     return func(*args, **kwargs)
 TypeError: my_account() missing 1 required positional argument: 'username'
 2021-12-07 11:55:10,027 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 20:06:48,680 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 20:07:27,396 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 20:11:53,605 INFO: Blend & Filter startup [in /Users/cameronmaxey/Desktop/cs205/BlendAndFilter/app/__init__.py:48]

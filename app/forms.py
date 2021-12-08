@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField, SelectMultipleField
+from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField, SelectMultipleField, SelectField
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, Length
 from app.models import User
 
@@ -49,3 +49,7 @@ class AddShopForm(FlaskForm):
     about_shop = TextAreaField('About Shop', validators=[Length(min=0, max=140)])
     submit = SubmitField('Create Shop')
 
+class SearchForm(FlaskForm):
+    city = TextAreaField('city', validators=[Length(min=0)])
+    state = SelectField('State', choices=["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"], coerce=str)
+    submit = SubmitField('Blend!')
