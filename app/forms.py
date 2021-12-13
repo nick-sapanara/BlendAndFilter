@@ -46,8 +46,18 @@ class AddShopForm(FlaskForm):
     ownerName = StringField('Owner', validators=[DataRequired()])
     address = StringField('Address', validators=[DataRequired()])
     website = StringField('Website', validators=[DataRequired()])
-    about_shop = TextAreaField('About Shop', validators=[Length(min=0, max=140)])
-    submit = SubmitField('Create Shop')
+    submit = SubmitField('Submit')
+
+
+class AddShopForm2(FlaskForm):
+    about_me = TextAreaField('About Shop', validators=[Length(min=0, max=140)])
+    submit = SubmitField('Next')
+
+
+class RegistrationForm3(FlaskForm):
+    tag = SelectMultipleField("What's Your Favorite Coffee?", coerce=int, validators=[DataRequired()])
+    submit = SubmitField('Create Account!')
+
 
 class SearchForm(FlaskForm):
     city = TextAreaField('city', validators=[Length(min=0)])

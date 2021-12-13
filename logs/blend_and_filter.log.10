@@ -1,4 +1,4 @@
-2021-12-04 16:47:24,358 ERROR: Exception on / [GET] [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
+2021-12-07 11:46:50,578 ERROR: Exception on / [GET] [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
 Traceback (most recent call last):
   File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -38,9 +38,9 @@ Traceback (most recent call last):
     rv = url_adapter.build(
   File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/werkzeug/routing.py", line 2314, in build
     raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'my_account'. Did you forget to specify values ['name']?
-2021-12-04 16:49:01,837 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
-2021-12-04 16:49:03,396 ERROR: Exception on / [GET] [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
+werkzeug.routing.BuildError: Could not build url for endpoint 'my_account'. Did you forget to specify values ['username']?
+2021-12-07 11:47:06,458 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 11:47:07,537 ERROR: Exception on / [GET] [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
 Traceback (most recent call last):
   File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -80,5 +80,6 @@ Traceback (most recent call last):
     rv = url_adapter.build(
   File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/werkzeug/routing.py", line 2314, in build
     raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'my_account'. Did you forget to specify values ['name']?
-2021-12-04 16:53:03,149 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+werkzeug.routing.BuildError: Could not build url for endpoint 'my_account'. Did you forget to specify values ['username']?
+2021-12-07 11:48:46,484 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-07 11:53:15,235 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]

@@ -23,8 +23,9 @@
                     <li><a href="{{url_for('new_account') }}">New Account</a></li>
                     {% else %}
                     <li><a href="{{ url_for('logout') }}">Logout</a></li>
-                    <li><a href="{{ url_for('my_account') }}">My Account</a></li>
+                    <li><a href="{{ url_for('my_account', username=current_user.username) }}">My Account</a></li>
                     <li><a href="{{ url_for('add_shop') }}">Add Shop</a></li>
+                    <li><a href="{{ url_for('shop') }}">Shop</a></li>
                     {% endif %}
                 </ul>
             </div>

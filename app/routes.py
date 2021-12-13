@@ -95,12 +95,12 @@ def new_account3():
     return render_template('new_account.html', title='New Account', form=form)
 
 
-@app.route('/my_account')
+@app.route('/my_account/<username>')
 @login_required
 def my_account(username):
     my_account = User.query.filter_by(username=username).first_or_404()
     if my_account is None:
-        flash('That game does not exist in the database')
+        flash('That user does not exist in the database')
         return redirect(url_for('index'))
     return render_template('my_account.html', title='My Account', my_account=my_account)
 
@@ -117,14 +117,14 @@ def add_shop():
                     about_shop=form.about_shop.data)
         db.session.add(shop)
         db.session.commit()
-        return redirect(url_for('shop'))
-    return render_template('add_shop.html', title='Add Shop', form=form)
+        return redirect(url_for('index'))
+    return render_template('add_shop.html', title='Add Shop', form=form, shop=shop)
 
 @app.route('/shop')
 @login_required
 def shop():
+    return render_template('shop.html', title='Shop', shop=shop)
 
-    return render_template('shop.html', title='Shop')
 
 @app.route("/populate_db")
 def populate_db():
@@ -145,6 +145,29 @@ def populate_db():
     db.session.add_all([t1, t2, t3, t4, t5, t6])
     db.session.commit()
 
+
+    s1 = Shop(shopName="Joe's Joe", ownerName="Joe Joseph",
+              address="123 Coffee St, Ithaca, NY", website="www.joejoe.com",
+              about_shop="Best coffee in town")
+    s2 = Shop(shopName="Kwirky Koffee", ownerName="Sammy Snake",
+              address="567 Brew St, Brick, NJ", website="www.kk.com",
+              about_shop="Koffee with a kwirk")
+    s3 = Shop(shopName="Sips", ownerName="Adele Bell",
+              address="111 French Press Pl, New York, NY", website="www.sips.com",
+              about_shop="Take a sip")
+    db.session.add_all([s1, s2, s3])
+    db.session.commit()
+
+
+    st1 = Tag(coffee="Dark Roast")
+    st2 = Tag(coffee="Medium Roast")
+    st3 = Tag(coffee="Light Roast")
+    st4 = Tag(coffee="Espresso")
+    st5 = Tag(coffee="Latte")
+    st6 = Tag(coffee="Cold Brew")
+    db.session.add_all([st1, st2, st3, st4, st5, st6])
+    db.session.commit()
+
     u2t1 = User2Tag(user_id="1", tag_id="1")
     u2t2 = User2Tag(user_id="1", tag_id="2")
     u2t3 = User2Tag(user_id="1", tag_id="5")
@@ -153,6 +176,16 @@ def populate_db():
     u2t6 = User2Tag(user_id="2", tag_id="4")
     u2t7 = User2Tag(user_id="3", tag_id="6")
     db.session.add_all([u2t1, u2t2, u2t3, u2t4, u2t5, u2t6, u2t7])
+    db.session.commit()
+
+    s2st1 = User2Tag(user_id="1", tag_id="1")
+    s2st2 = User2Tag(user_id="1", tag_id="2")
+    s2st3 = User2Tag(user_id="1", tag_id="5")
+    s2st4 = User2Tag(user_id="2", tag_id="1")
+    s2st5 = User2Tag(user_id="2", tag_id="2")
+    s2st6 = User2Tag(user_id="2", tag_id="4")
+    s2st7 = User2Tag(user_id="3", tag_id="6")
+    db.session.add_all([s2st1, s2st2, s2st3, s2st4, s2st5, s2st6, s2st7])
     db.session.commit()
 
     flash("Database has been populated")
@@ -168,5 +201,7 @@ def clear_db():
        db.session.execute(table.delete())
    db.session.commit()
    return render_template('index.html', meta=meta)
+
+
 
 

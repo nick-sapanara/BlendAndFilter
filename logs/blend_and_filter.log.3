@@ -1,5 +1,4 @@
-2021-12-07 11:33:56,504 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
-2021-12-07 11:33:57,975 ERROR: Exception on / [GET] [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
+2021-12-12 14:30:04,974 ERROR: Exception on / [GET] [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
 Traceback (most recent call last):
   File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -9,8 +8,36 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/routes.py", line 13, in index
-    return render_template('index.html', title=title)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/routes.py", line 25, in index
+    return render_template('index.html', title=title, form=form)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/templates/index.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/templates/base.html", line 28, in template
+    <li><a href="{{ url_for('shop'), shopName=shopName.id }}">Shop</a></li>
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got '='
+2021-12-12 14:31:49,414 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-12 14:31:50,475 ERROR: Exception on / [GET] [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/routes.py", line 25, in index
+    return render_template('index.html', title=title, form=form)
   File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
     return _render(
   File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/templating.py", line 128, in _render
@@ -31,17 +58,17 @@ Traceback (most recent call last):
     {% block body -%}
   File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block 'body'
     {% block navbar %}
-  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/templates/base.html", line 26, in block 'navbar'
-    <li><a href="{{ url_for('my_account') }}">My Account</a></li>
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/templates/base.html", line 28, in block 'navbar'
+    <li><a href="{{ url_for('shop') }}">Shop</a></li>
   File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/helpers.py", line 338, in url_for
     return appctx.app.handle_url_build_error(error, endpoint, values)
   File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/helpers.py", line 325, in url_for
     rv = url_adapter.build(
   File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/werkzeug/routing.py", line 2314, in build
     raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'my_account'. Did you forget to specify values ['name']?
-2021-12-07 11:43:04,875 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
-2021-12-07 11:43:06,154 ERROR: Exception on / [GET] [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
+werkzeug.routing.BuildError: Could not build url for endpoint 'shop'. Did you forget to specify values ['shopName']?
+2021-12-12 14:32:38,185 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+2021-12-12 14:32:39,049 ERROR: Exception on / [GET] [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py:1457]
 Traceback (most recent call last):
   File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -51,8 +78,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/routes.py", line 13, in index
-    return render_template('index.html', title=title)
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/routes.py", line 25, in index
+    return render_template('index.html', title=title, form=form)
   File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
     return _render(
   File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/templating.py", line 128, in _render
@@ -73,13 +100,9 @@ Traceback (most recent call last):
     {% block body -%}
   File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block 'body'
     {% block navbar %}
-  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/templates/base.html", line 26, in block 'navbar'
-    <li><a href="{{ url_for('my_account') }}">My Account</a></li>
-  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/helpers.py", line 338, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/flask/helpers.py", line 325, in url_for
-    rv = url_adapter.build(
-  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/werkzeug/routing.py", line 2314, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'my_account'. Did you forget to specify values ['name']?
-2021-12-07 11:44:17,529 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/templates/base.html", line 28, in block 'navbar'
+    <li><a href="{{ url_for('shop', shopName=shop.shopName) }}">Shop</a></li>
+  File "/Users/nicksapanara/Desktop/cs205/BlendAndFilter/venv/lib/python3.9/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'shop' is undefined
+2021-12-12 14:33:18,612 INFO: Blend & Filter startup [in /Users/nicksapanara/Desktop/cs205/BlendAndFilter/app/__init__.py:48]

@@ -2,5 +2,14 @@
 {% import 'bootstrap/wtf.html' as wtf %}
 
 {% block app_content %}
-     <h1>Under construction</h1>
+     <h3>Hi, {{ my_account.name }}!</h3>
+     <h5>About me:</h5>
+     <p>{{my_account.about_me}}</p>
+     <h5>My Favorite Coffee Types:</h5>
+      <ul>
+       {% for t2u_list in my_account.u2t_list %}
+           <li>{{ t2u_list.tag.coffee }}</li>
+       {% endfor %}
+    </ul>
+
 {% endblock %}
